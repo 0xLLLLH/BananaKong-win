@@ -2,9 +2,12 @@
 *                                   *
 *			≤‚ ‘”√Œƒº˛				*
 *                                   *
-********************************* **/
-#include <windows.h>
-LRESULT CALLBACK WndProc(HWND , UINT , WPARAM , LPARAM);
+********************************* **/
+
+#include <windows.h>
+
+LRESULT CALLBACK WndProc(HWND , UINT , WPARAM , LPARAM);
+
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance , PSTR szCmdLine , int iCmdShow)
 {
 	static TCHAR szAppName[] = TEXT("HelloWindows!");
@@ -45,8 +48,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance , PSTR szCmdLine
 		TranslateMessage(&msg);
 		DispatchMessage(&msg);
 	}
-	return msg.wParam;
-}
+	return msg.wParam;
+
+}
+
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
 	HDC hdc;

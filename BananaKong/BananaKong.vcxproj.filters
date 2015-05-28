@@ -18,5 +18,25 @@
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="layer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="container.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="imagelayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="layer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="imagelayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="container.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
