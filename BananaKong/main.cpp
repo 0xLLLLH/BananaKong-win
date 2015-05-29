@@ -5,16 +5,24 @@
 ********************************* **/
 
 #include <windows.h>
+#include "container.h"
 
+//全局变量
+Container box;
+
+//用于初始化资源及对象
+void InitResource(HWND hwnd);
+
+//窗口对应的消息响应函数
 LRESULT CALLBACK WndProc(HWND , UINT , WPARAM , LPARAM);
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance , PSTR szCmdLine , int iCmdShow)
 {
-	static TCHAR szAppName[] = TEXT("HelloWindows!");
+	static TCHAR szAppName[] = TEXT("Banana Kong");
 	HWND hwnd;
 	MSG msg;
 	WNDCLASS wndclass;
-	wndclass.style          = CS_HREDRAW | CS_VREDRAW;                  //类风格
+	wndclass.style          = CS_HREDRAW | CS_VREDRAW |CS_DBLCLKS;                  //类风格
 	wndclass.lpfnWndProc    = WndProc ;                                 //窗口对应的消息处理函数
 	wndclass.cbClsExtra     = 0;                                        //额外空间
 	wndclass.cbWndExtra     = 0;                                        //同上
@@ -41,6 +49,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance , PSTR szCmdLine
 		hInstance,                          //程序实例句柄
 		NULL                                //创建参数
 		);
+	InitResource(hwnd);
 	ShowWindow(hwnd, iCmdShow);
 	UpdateWindow(hwnd);
 	while(GetMessage(&msg, NULL, 0, 0))
@@ -54,25 +63,20 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance , PSTR szCmdLine
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-	HDC hdc;
-	PAINTSTRUCT ps;
-	RECT rect;
-	switch(message)
+	if (box.DispatchMSG(hwnd,message,wParam,lParam))
 	{
-	case WM_CREATE :
-		//PlaySound(TEXT("hellowin.wav"),NULL,SND_FILENAME|SND_ASYNC);
-		return 0;
-	case WM_PAINT:          //必须进行绘制以消除无效矩形,否则将死循环
-		hdc = BeginPaint(hwnd , &ps);
-		//==========
-		//在接下来的部分进行绘制
-		GetClientRect(hwnd , &rect);
-		DrawText(hdc, TEXT("Hello Windows 8.1!"), -1, &rect, DT_SINGLELINE | DT_CENTER | DT_VCENTER);
-		EndPaint(hwnd, &ps);        //结束绘图并释放设备环境句柄
-		return 0;
-	case WM_DESTROY:
-		PostQuitMessage(0);         //将退出消息插入消息队列以结束循环
-		return 0;
+		//若消息有图层响应
+
 	}
-	return DefWindowProc(hwnd, message, wParam, lParam);
+	else
+	{
+		//否则调用默认的窗口处理函数
+		return DefWindowProc(hwnd, message, wParam, lParam);
+	}
+}
+
+void InitResource(HWND hwnd)
+{
+	//TODO:初始化资源及对象
+	box.SetHandle(hwnd);
 }

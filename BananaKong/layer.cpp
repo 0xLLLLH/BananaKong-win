@@ -1,7 +1,14 @@
-/**
-*该文件包含Layer类成员函数的实现
-*/
+/*!
+ * \file layer.cpp
+ * \date 2015/05/29 19:34
+ *
+ * \author Lincifer
+ * Contact: linlihao159@gmail.com
+ *
+ * \brief 该文件包含Layer类成员函数的实现
+ *
 
+*/
 #include "layer.h"
 
 Layer::Layer(bool visible,int level)
@@ -20,17 +27,12 @@ void Layer::SetLevel(int level)
 	m_level=level;
 }
 
-void Layer::Draw()
+ bool LayerCmp(Layer * a,Layer * b)
 {
-	//TODO:在此处添加成员函数的具体实现
+	return (a->m_level)>(b->m_level);
 }
 
-bool Layer::Response(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
-{
-	//TODO:在此处添加成员函数的具体实现
-}
-
-Layer::~Layer()
-{
-	//TODO:在此处添加析构函数的具体实现
-}
+ Layer::~Layer()
+ {
+	 //TODO:在此处添加Layer类的析构函数实现
+ }
