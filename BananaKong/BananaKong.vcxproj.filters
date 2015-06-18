@@ -27,6 +27,15 @@
     <ClCompile Include="imagelayer.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="obstacle.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="spritelayer.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="sprite.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="layer.h">
@@ -38,5 +47,192 @@
     <ClInclude Include="container.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="sprite.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="obstacle.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="spritelayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="commom.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="buttonlayer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BananaKong.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resource\Forest_BG_2_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_2_6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_7.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BK_1_8.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_5.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_6.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_7.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\Forest_BG_1_8.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Barril.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Land_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Land_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Land_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Land_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Land_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Crash.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Dash.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Down.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Jump.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Run.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Kong_Slide.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_HARD_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Parachute.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Platform_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Platform_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Platform_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Platform_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Platform_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Banana_wave_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_ Top_Logo.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_SOFT_0.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_HARD_1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_HARD_2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_HARD_3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_HARD_4.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\Resource\BK_Banana.bmp">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

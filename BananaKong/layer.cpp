@@ -27,6 +27,11 @@ void Layer::SetLevel(int level)
 	m_level=level;
 }
 
+bool Layer::isVisible()
+{
+	return m_visible;
+}
+
  bool LayerCmp(Layer * a,Layer * b)
 {
 	return (a->m_level)>(b->m_level);

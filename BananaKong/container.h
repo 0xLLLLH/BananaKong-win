@@ -17,6 +17,11 @@
 #include <vector>
 #include <algorithm>
 #include "layer.h"
+#include "imagelayer.h"
+#include "spritelayer.h"
+#include "commom.h"
+
+using namespace std;
 
 class Container
 {
@@ -36,11 +41,22 @@ public:
 	//用于对图层按级别排序
 	void SortLayer();
 
+	Layer * GetTop();
+
 	//负责将接收到的消息自上向下分发给每一个图层
 	bool DispatchMSG(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam);
 
-	//刷新所有图层
+	//刷新所有图层的显示
 	void DrawAll();
+
+	//更新所有图层的状态
+	void Next();
+
+	//清除图层
+	void Clear();
+
+	//运动速度加快
+	void SpeedUp();
 
 	//析构函数,释放资源
 	~Container();
@@ -49,7 +65,7 @@ private:
 	HWND m_hwnd;
 
 	//用于储存图层指针
-	vector <Layer *> Layers; 
+	vector < Layer * > Layers; 
 };
 
 #endif
